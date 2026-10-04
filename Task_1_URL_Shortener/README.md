@@ -2,11 +2,13 @@
 
 A backend for a URL shortener, built with **Python** and **Flask**.
 
-The project is in its early stage. The Flask app, a home route and a health check API are working and tested locally.
+The project is in its early stage. The Flask app, a health check API and a `POST /api/shorten` endpoint that receives a long URL are working and tested locally.
 
 ---
 
-## ✅ Progress So Far
+## 📅 Day 1 — Flask Setup & Health Check
+
+### Completed
 
 - Installed Flask
 - Created the Flask application
@@ -14,6 +16,21 @@ The project is in its early stage. The Flask app, a home route and a health chec
 - Created the health check API
 - Returned a JSON response
 - Tested the backend locally
+
+---
+
+## 📅 Day 2 — REST API & POST Request
+
+### Completed
+
+- Learned GET and POST HTTP methods
+- Learned how API requests work
+- Learned JSON request bodies
+- Created `POST /api/shorten`
+- Used Flask `request.get_json()`
+- Extracted URL from JSON data
+- Added basic input validation
+- Implemented HTTP 400 error response
 
 ---
 
@@ -52,6 +69,7 @@ Flask starts a local development server, usually at `http://127.0.0.1:5000`.
 |---|---|---|
 | GET | `/` | Check whether the backend is running |
 | GET | `/api/health` | Check backend health |
+| POST | `/api/shorten` | Receive a long URL |
 
 ### Example Health Response
 
@@ -62,11 +80,31 @@ Flask starts a local development server, usually at `http://127.0.0.1:5000`.
 }
 ```
 
+### Example Request — `POST /api/shorten`
+
+```json
+{
+    "url": "https://www.example.com/this-is-a-long-url"
+}
+```
+
+### Example Response
+
+```json
+{
+    "status": "success",
+    "message": "URL received successfully",
+    "url": "https://www.example.com/this-is-a-long-url"
+}
+```
+
+If the request has no URL, the API returns an **HTTP 400** error response.
+
 ---
 
 ## 🧪 Testing the Endpoints
 
-Before moving forward, make sure both endpoints work.
+Before moving forward, make sure all endpoints work.
 
 ### Endpoint 1 — Home
 
@@ -95,19 +133,37 @@ Expected response:
 }
 ```
 
-You can test them in the browser or from the terminal:
+### Endpoint 3 — Shorten
+
+```text
+POST /api/shorten
+```
+
+Expected response:
+
+```json
+{
+    "status": "success",
+    "message": "URL received successfully",
+    "url": "https://www.example.com/this-is-a-long-url"
+}
+```
+
+You can test them from the terminal:
 
 ```bash
 curl http://127.0.0.1:5000/
 curl http://127.0.0.1:5000/api/health
+curl -X POST http://127.0.0.1:5000/api/shorten \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://www.example.com/this-is-a-long-url"}'
 ```
 
 ---
 
 ## 🚀 Next Steps
 
-- Create an endpoint that accepts a long URL
 - Generate a short code for each URL
 - Store the original and short URLs
 - Redirect short URLs to the original URL
-- Add validation and error handling
+- Improve validation and error handling
