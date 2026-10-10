@@ -1,0 +1,13 @@
+# Python virtual environments
+venv/
+**/venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Local SQLite database
+**/url_shortener.db
