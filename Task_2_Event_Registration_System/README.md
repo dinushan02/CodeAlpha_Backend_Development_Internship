@@ -38,6 +38,8 @@ The project provides REST API endpoints for creating events, retrieving event in
 
 Replace `<id>` with the relevant event ID.
 
+**Note:** The DELETE endpoint must be implemented in the view for this method to work.
+
 ## Example: Create an Event
 
 **Request**
@@ -90,8 +92,8 @@ The API returns a success message when the registration is cancelled. If the reg
 
 ## How to Run the Project
 
-1. Clone or download this repository.
-2. Open the project folder in VS Code.
+1. Clone or download the repository.
+2. Open the `Task_2_Event_Registration_System` folder in VS Code.
 3. Create and activate a Python virtual environment.
 4. Install the required dependencies:
 
@@ -111,9 +113,9 @@ The API returns a success message when the registration is cancelled. If the reg
    python manage.py runserver
    ```
 
-7. Open the API in your browser:
+7. Open the event API in your browser:
 
-   `http://127.0.0.1:8000/api/events/`
+   http://127.0.0.1:8000/api/events/
 
 ## Testing
 
