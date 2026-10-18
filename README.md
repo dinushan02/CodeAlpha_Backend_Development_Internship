@@ -2,205 +2,181 @@
 
 A collection of backend development projects built using **Python** as part of my **CodeAlpha Backend Development Internship**.
 
-This repository demonstrates my practical learning and hands-on experience in backend development, REST APIs, databases, server-side programming, authentication, and backend business logic.
-
----
+This repository documents my hands-on learning journey in backend development, REST APIs, databases, server-side programming, and application business logic.
 
 ## 🎯 Internship Objective
 
-The goal of this internship is to gain practical experience in backend development and server-side programming by building real-world applications.
+The objective of this internship is to gain practical experience in backend development by building real-world applications and implementing core backend concepts.
 
 Throughout this internship, I am focusing on:
 
 - Python backend development
-- RESTful APIs
+- RESTful API design
 - Backend architecture
 - Database design and integration
 - CRUD operations
-- Authentication and authorization
 - API request and response handling
-- Business logic implementation
-- Error handling and validation
+- Input validation and error handling
+- Database relationships
+- Backend business logic
 - Git and GitHub
-- Project documentation
+- Project documentation and testing
 
----
+## 🛠️ Technologies and Tools
 
-## 🛠️ Technologies & Tools
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Backend Frameworks | Flask, Django |
+| API Development | Django REST Framework, REST APIs, JSON |
+| Database | SQLite |
+| Development Tools | VS Code, Git, GitHub |
+| API Testing | Postman, Django REST Framework Browsable API |
 
-**Programming Language**
-- Python
-
-**Backend Frameworks**
-- Flask
-- Django
-
-**Database**
-- SQLite
-- PostgreSQL / other database technologies where applicable
-
-**API**
-- REST API
-- JSON
-- HTTP methods
-
-**Development Tools**
-- Git
-- GitHub
-- VS Code
-- Postman
-
----
+Additional technologies may be introduced as the projects evolve.
 
 ## 📂 Projects
 
-This internship repository contains three backend development projects.
+This repository is organized around three backend development projects selected for my internship portfolio.
 
-### 1️⃣ Simple URL Shortener
-📁 `Task_1_URL_Shortener`
+### 1. Simple URL Shortener
 
-A backend application that converts long URLs into unique short URLs.
+**Folder:** `Task_1_URL_Shortener`
 
-**Key Features**
+A backend application that converts long URLs into short URLs using a generated short code.
+
+**Implemented functionality**
+
 - Accept long URLs through an API
-- Generate unique short codes
-- Store short code and original URL in a database
-- Redirect users from the short URL to the original URL
-- API-based backend architecture
-- URL validation and error handling
+- Generate short codes
+- Store URL mappings in SQLite
+- Redirect short URLs to their original destinations
 
 **Technologies**
+
 - Python
 - Flask
-- REST API
 - SQLite
+- REST API
 
-**Main Concepts Learned**
+**Key concepts**
+
 - Flask application structure
-- API endpoints
-- HTTP methods
-- JSON request and response
+- HTTP methods and API endpoints
+- JSON request and response handling
 - Database integration
-- URL routing
-- Redirects
-- Unique ID/code generation
+- URL routing and redirects
+- Short-code generation
 
----
+### 2. Event Registration System
 
-### 2️⃣ Event Registration System
-📁 `Task_2_Event_Registration_System`
+**Folder:** `Task_2_Event_Registration_System`
 
-A backend system for managing events and user registrations.
+A backend application for managing events and user registrations using Django and Django REST Framework.
 
-**Key Features**
-- View available events
-- View event details
+**Implemented functionality**
+
+- Retrieve event lists and individual event details
+- Create events
 - Register users for events
-- Connect users with events
-- View user registrations
+- Prevent duplicate registrations
+- Check event capacity before registration
+- View registrations for an event
 - Cancel registrations
-- Database-driven event management
-- Input validation
 
 **Technologies**
+
 - Python
 - Django
-- REST API
-- Database
+- Django REST Framework
+- SQLite
+- Postman
 
-**Main Concepts Learned**
+**Key concepts**
+
 - Django project structure
-- Django models
+- Models and serializers
 - Database relationships
-- API development
+- REST API development
 - CRUD operations
-- User and event relationships
-- Registration management
-- Backend validation
+- Input validation
+- HTTP status codes
+- Registration business logic
 
----
+### 3. Job Board Platform
 
-### 3️⃣ Job Board Platform
-📁 `Task_4_Job_Board_Platform`
+**Folder:** `Task_4_Job_Board_Platform`
 
-A backend platform for managing job listings, employers, candidates, resumes, and job applications.
+A planned backend application for managing job listings, employers, candidates, and job applications.
 
-**Key Features**
+**Planned functionality**
+
 - Create and manage job listings
-- Search for jobs
-- Filter job listings
-- Employer management
-- Candidate management
-- Resume upload
+- Search and filter jobs
+- Manage employer and candidate information
 - Apply for jobs
-- Track application status
-- Backend validation
-- Application management
+- Track application statuses
+- Implement application validation and business rules
 
-**Technologies**
+Resume uploads, authentication, and other advanced features may be added as development progresses.
+
+**Planned technologies**
+
 - Python
-- Django / Flask
-- REST API
-- Database
+- Django
+- Django REST Framework
+- SQLite
 
-**Main Concepts Learned**
+**Key concepts to explore**
+
 - Complex database relationships
 - RESTful API design
-- File uploads
 - Search and filtering
 - Application workflows
 - Status management
-- Backend business logic
-- Authentication and authorization
+- File uploads, if implemented
+- Authentication and authorization, if implemented
 
----
+## 🧠 Skills and Concepts
 
-## 🧠 Skills Demonstrated
-
-Through these projects, I am developing practical experience in:
+The projects help me develop practical experience with:
 
 ```text
 Python
    ↓
 Backend Development
    ↓
-Flask / Django
+Flask and Django
    ↓
 REST APIs
    ↓
-HTTP & JSON
+HTTP and JSON
    ↓
 Database Integration
    ↓
 CRUD Operations
    ↓
-Authentication
+Validation and Error Handling
    ↓
-Business Logic
+Backend Business Logic
    ↓
-Git & GitHub
+Git and GitHub
 ```
-
----
 
 ## 📈 Learning Progression
 
-The projects are intentionally structured from simpler backend concepts to more complex application logic.
+The projects follow a progression from fundamental backend concepts to more complex application workflows.
 
 ```text
 Project 1 — URL Shortener
-API Fundamentals → Routing → Database → Redirects
+API Fundamentals → Routing → SQLite → Redirects
    ↓
 Project 2 — Event Registration System
-Django → Models → Relationships → CRUD → Registrations
+Django → Models → Serializers → Relationships → Registrations
    ↓
 Project 3 — Job Board Platform
-Complex Models → File Uploads → Search → Applications → Business Logic
+Job Listings → Search → Applications → Status Management
 ```
-
-This progression helps me strengthen my understanding of backend development step by step.
-
----
 
 ## 📁 Repository Structure
 
@@ -222,100 +198,108 @@ CodeAlpha_Backend_Development_Internship/
 │   └── ...
 │
 └── Task_4_Job_Board_Platform/
-    ├── app.py
+    ├── manage.py
     ├── requirements.txt
     ├── README.md
     └── ...
 ```
 
----
-
-## 🎓 Internship Learning Outcomes
-
-By completing these projects, I am gaining practical experience in:
-
-- Designing backend applications
-- Building REST APIs
-- Working with databases
-- Creating database models
-- Connecting backend applications with databases
-- Implementing CRUD operations
-- Handling API requests and responses
-- Validating user input
-- Implementing backend business logic
-- Managing relationships between data
-- Working with authentication
-- Handling file uploads
-- Using Git and GitHub for version control
-- Documenting software projects
-
----
+*Note: The Job Board Platform folder will be added when development begins. Individual project structures may vary.*
 
 ## 💻 How to Run the Projects
 
-Each project contains its own documentation and dependencies.
+Each project has its own dependencies and setup instructions.
 
-**1. Navigate into the required project directory**
+### Example: Run the URL Shortener
+
+From the repository root:
+
 ```bash
 cd Task_1_URL_Shortener
-```
-
-**2. Create a virtual environment**
-```bash
 python -m venv venv
 ```
 
-**3. Activate the virtual environment**
+Activate the virtual environment.
 
-Windows
-```bash
+**Windows — Command Prompt**
+
+```bat
 venv\Scripts\activate
 ```
 
-macOS / Linux
+**Windows — Git Bash**
+
+```bash
+source venv/Scripts/activate
+```
+
+**macOS or Linux**
+
 ```bash
 source venv/bin/activate
 ```
 
-**4. Install dependencies**
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-**5. Follow the project's individual `README.md`** for the remaining setup and execution instructions.
+Follow the project's `README.md` for database setup and instructions to start the application.
 
----
+### Run the Event Registration System
+
+From the repository root:
+
+```bash
+cd Task_2_Event_Registration_System
+python -m venv venv
+```
+
+Activate the environment, then run:
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+Open the API in your browser:
+
+http://127.0.0.1:8000/api/events/
+
+Refer to the individual README files for complete setup instructions.
+
+## 🧪 Testing
+
+Testing is performed using the tools appropriate to each project, including Postman and Django REST Framework's browsable API.
+
+Tests cover relevant API operations, request validation, successful responses, and error handling.
 
 ## 📚 Project Documentation
 
-Each project has a dedicated README file containing:
+Each project has its own README containing relevant information about:
 
 - Project overview
 - Features
 - Technologies used
-- Project structure
-- Installation steps
+- Installation and setup
 - API endpoints
-- Database details
-- Usage instructions
+- Example requests and responses
 - Testing information
-- Screenshots where applicable
+- Project status
 
----
+## 🎓 Internship Information
 
-## 🔗 Internship
+- **Organization:** CodeAlpha
+- **Domain:** Backend Development
+- **Programming Language:** Python
 
-**Organization:** CodeAlpha
-**Domain:** Backend Development
-**Programming Language:** Python
-
-This repository contains my practical work completed as part of the CodeAlpha Backend Development Internship.
-
----
+This repository documents my practical work and learning progress during the CodeAlpha Backend Development Internship.
 
 ## 👨‍💻 About Me
 
-I am a Python Developer candidate focused on building strong programming, problem-solving, and backend development skills through hands-on projects.
+I am an aspiring Python Developer focused on strengthening my programming, problem-solving, and backend development skills through practical projects.
 
 I am continuously improving my knowledge of:
 
@@ -323,22 +307,17 @@ I am continuously improving my knowledge of:
 - Backend Development
 - REST APIs
 - Databases
-- Django
-- Flask
-- Data Structures & Algorithms
+- Django and Flask
+- Data Structures and Algorithms
 - Software Development
 
----
+## 🔗 Portfolio
 
-## 📌 Portfolio
+- **GitHub:** [dinushan02](https://github.com/dinushan02)
+- **YouTube:** [@CodewithDinushan](https://www.youtube.com/@CodewithDinushan)
 
-**GitHub:** [dinushan02](https://github.com/dinushan02)
-**YouTube:** [@CodewithDinushan](https://www.youtube.com/@CodewithDinushan)
+## ⭐ Explore the Projects
 
----
+Feel free to explore the source code, review the project documentation, and follow my backend development journey.
 
-## ⭐ If you find these projects useful
-
-Feel free to explore the projects, review the source code, and follow my learning journey.
-
-**Built with Python 🐍 | Learning Backend Development 🚀**
+**Built with Python 🐍 | Learning by Building 🚀**
